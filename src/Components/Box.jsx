@@ -38,9 +38,6 @@ export const Box = () =>{
             })
             setState([...result])
         }
-        else{
-            alert(`${i} Balloon Not Available`)
-        }
         setValue("")
     }
 
@@ -78,6 +75,7 @@ export const Box = () =>{
                     </div>
 
                     <div className="button">
+                        {state.length===0?"":`Enter Number from 1 to ${state.length}`}
                         <input type="number" value={value} placeholder="Enter Ballon Position" onChange={handleChange} />
                         <button onClick={()=>{handleClick(value)}}>SHOOT</button>
                     </div>
